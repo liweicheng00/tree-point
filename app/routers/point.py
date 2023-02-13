@@ -52,6 +52,8 @@ def consume_point(record: schemas.CreatePointConsumedRecord = Body(...)):
     update_user = db.query(models.User).filter(models.User.id == record.user_id).first()
     if not update_user:
         raise HTTPException(404)
+    if update_user.total_points < record.transaction_points:
+        raise HTTPException(403, detail="Insufficient balance")
     update_user.total_points -= record.transaction_points
     db.add_all([new_record, update_user])
     db.commit()
