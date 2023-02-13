@@ -12,13 +12,15 @@ services:
       - ./:/code
     ports:
       - "80:80"
-    depends_on:
+    links:
       - mysql
   mysql:
     image: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=mysqlsecret
     volumes:
+      - ./init.sql:/var/init.sql
       - ./db/mysql:/var/lib/mysql
+    command: --init-file /var/init.sql
     ports:
       - "3306:3306"
