@@ -18,6 +18,8 @@ docker-compose up
 <img width="1413" alt="image" src="https://user-images.githubusercontent.com/47774646/218435365-56e1fe81-22fa-4b7f-8dfb-309cc2a185df.png">
 
 2. Received points
+
+Use the id in last step as <user_id>
 <img width="1416" alt="image" src="https://user-images.githubusercontent.com/47774646/218436137-705afb99-db47-49ce-9c85-9f47873b6553.png">
 <img width="1411" alt="image" src="https://user-images.githubusercontent.com/47774646/218436182-005103cc-78e8-4dd7-a55b-768e68922c6d.png">
 
